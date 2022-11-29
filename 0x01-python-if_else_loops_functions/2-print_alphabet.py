@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-res = ""
-for idx in range(97, 123):
-    res = res + chr(idx)
-print("{}".format(res), end="")
+"""Print the alphabet in lowercase, not followed by a new line."""
+for letter in range(97, 123):
+    print("{}".format(chr(letter)), end="")
