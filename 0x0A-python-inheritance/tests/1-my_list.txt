@@ -1,0 +1,74 @@
+The "1-my_list" module
+======================
+
+using "MyList"
+-------------
+
+This ia a text file in reStructuredText format. First import
+"MyList" from the "1-my_list" module:
+
+    >>> MyList = __import__('1-my_list').MyList
+    >>> mylist = MyList()
+    >>> mylist.append(1)
+    >>> mylist.append(4)
+    >>> mylist.append(3)
+    >>> mylist.append(6)
+    >>> mylist.append(7)
+    >>> print(mylist)
+    [1, 4, 3, 6, 7]
+    >>> mylist.print_sorted()
+    [1, 3, 4, 6, 7]
+    >>> print(mylist)
+    [1, 4, 3, 6, 7]
+
+
+    >>> mylist = MyList()
+    >>> mylist.append(1)
+    >>> mylist.append(1)
+    >>> mylist.append(1)
+    >>> mylist.append(1)
+    >>> mylist.append(1)
+    >>> print(mylist)
+    [1, 1, 1, 1, 1]
+    >>> mylist.print_sorted()
+    [1, 1, 1, 1, 1]
+    >>> print(mylist)
+    [1, 1, 1, 1, 1]
+
+
+    >>> mylist = MyList()
+    >>> print(mylist)
+    []
+    >>> mylist.print_sorted()
+    []
+    >>> print(mylist)
+    []
+
+
+    >>> mylist = MyList()
+    >>> mylist.append(1)
+    >>> mylist.append(4)
+    >>> mylist.append(9)
+    >>> mylist.append(5)
+    >>> mylist.append(5)
+    >>> mylist.append(2)
+    >>> print(mylist)
+    [1, 4, 9, 5, 5, 2]
+    >>> mylist.print_sorted()
+    [1, 2, 4, 5, 5, 9]
+    >>> print(mylist)
+    [1, 4, 9, 5, 5, 2]
+
+
+    >>> mylist = MyList()
+    >>> mylist.append(5)
+    >>> mylist.append(4)
+    >>> mylist.append(3)
+    >>> mylist.append(2)
+    >>> mylist.append(1)
+    >>> print(mylist)
+    [5, 4, 3, 2, 1]
+    >>> mylist.print_sorted()
+    [1, 2, 3, 4, 5]
+    >>> print(mylist)
+    [5, 4, 3, 2, 1]
