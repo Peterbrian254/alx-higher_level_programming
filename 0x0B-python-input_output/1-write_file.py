@@ -1,18 +1,12 @@
 #!/usr/bin/python3
-"""
-Line function
+
+"""2-append_write module defines a function append_write that
+appends to a text file and returns the number of characters
+written
 """
 
 
-def number_of_lines(filename=""):
-    """number of lines from file
-    args:
-        filename: file to read
-    return:
-        number of lines
-    """
-    line_num = 0
-    with open(filename, encoding="utf-8") as f:
-        for line in f:
-            line_num += 1
-    return line_num
+def append_write(filename="", text=""):
+    """returns the number of characters appended to filename passed"""
+    with open(filename, "a") as f:
+        return (f.write(text))
