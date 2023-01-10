@@ -1,13 +1,19 @@
 #!/usr/bin/python3
-import json
-"""JavaScript Object Notation"""
+"""Add item script."""
+import sys
 
+save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
+load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
-def save_to_json_file(my_obj, filename):
-    """writes an Object to a text file, using a JSON representation
-    Args:
-        my_obj(obj): object
-        filename(str): filename
-    """
-    with open(filename, mode="w", encoding="utf-8") as a_file:
-        a_file.write(json.dumps(my_obj))
+try:
+    lst = load_from_json_file("add_item.json")
+except:
+    lst = []
+
+argc = len(sys.argv)
+
+if argc > 1:
+    for i in range(1, argc):
+        lst.append(sys.argv[i])
+
+save_to_json_file(lst, "add_item.json")
