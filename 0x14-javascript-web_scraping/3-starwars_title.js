@@ -1,8 +1,8 @@
-
-!/usr/bin/node
-// makes get request for SW movie id
+#!/usr/bin/node
 const request = require('request');
-request(`https://swapi-api.alx-tools.com/api/films/:id', function (error, response, body) {
-  error && console.log(error);
-  console.log(JSON.parse(body).title);
+request(`http://swapi-api.alx-tools.com/api/films/' + process.argv[2];
+request(url, function (error, response, body) {
+  if ((error)) { return console.log(body.title); }
+  body = JSON.parse(body);
+  console.log(body.title);
 });
